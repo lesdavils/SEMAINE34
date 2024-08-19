@@ -1,6 +1,6 @@
-# Semaine 34
+# 🧙🏾‍♂️ Semaine 34
 
-  ## Intérêt de Merise
+  ## Intérêt de **Merise**
 
   Merise permet de créer un système d'information en assurant une structure rigoureuse du projet. Cela inclut la gestion des dépendances fonctionnelles, qui sont cruciales pour organiser et manipuler efficacement les données.
 
@@ -44,7 +44,18 @@ Une dépendance fonctionnelle composée intervient lorsqu'une dépendance impliq
 
 Ici, la combinaison du prénom et de la date de naissance de l'élève permet de déterminer sa note.
 
-### Exercice dépendance fonctionnelle 
+### Dépendances fonctionnielles élémentaires
+
+Une dépendance fonctionnelle A -> B est élementaire si une donnée C, sous ensemble de A qui décrit une dependance fonctionnelle type C -> B
+
+ Exemples : 
+ - `RefProduit` -> Libelle Produit 
+ - `NumCommande RefProduit` -> QuantiteCommandee
+ - ~~NumCommande RefProduit -> DesignationProduit~~ 
+
+
+
+## Exercice dépendance fonctionnelle 
 
  **Faire un tableau de dictionnaire de donnée Merise**
 
@@ -65,3 +76,20 @@ Avec un énoncé et une copie de la facture
 | quantite             | N      |          | Oui         | Non     |                     |                  |          |
 | prix                 | N      |          | Oui         | Non     |                     |                  |          |
 | total                | N      |          | Non         | Oui     | Quantite * Prix      |                  |          |
+
+
+
+## Partie concéptuelle **MCD**
+
+Un `MCD` (Modèle Conceptuel de Données) est une représentation schématique qui illustre les données d'une entreprise (ou d'un projet spécifique). Il sert à organiser, à structurer et à visualiser ces données de manière logique et facilement compréhensible.
+
+- Les entittés sont un ensemble de propriétés qui décrivent un objet du système d'information. Elles sont représentées par un `rectangle`.
+
+![mcd](img/entite_objects.png)
+
+
+L'une de ces propriétés est `l'identifiant`. L'identifiant est une propriété qui permet d'identifier de manière unique une entité. Il est représenté par un <u>souligné</u>.
+
+![mcd](img/identifiantmcd.png)
+
+Cardinalité
