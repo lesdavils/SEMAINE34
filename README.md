@@ -1,4 +1,5 @@
-# 🧙🏾‍♂️ Semaine 34
+# 🧙🏾‍♂️
+#  Semaine 34
 
   ## Intérêt de **Merise**
 
@@ -79,9 +80,9 @@ Avec un énoncé et une copie de la facture
 
 
 
-## Partie concéptuelle **MCD**
+## Partie conceptuelle **MCD**
 
-Un `MCD` (Modèle Conceptuel de Données) est une représentation schématique qui illustre les données d'une entreprise (ou d'un projet spécifique). Il sert à organiser, à structurer et à visualiser ces données de manière logique et facilement compréhensible.
+Un `MCD` [(Modèle Conceptuel de Données)](https://www.base-de-donnees.com/mcd/) est une représentation schématique qui illustre les données d'une entreprise (ou d'un projet spécifique). Il sert à organiser, à structurer et à visualiser ces données de manière logique et facilement compréhensible.
 
 - Les entittés sont un ensemble de propriétés qui décrivent un objet du système d'information. Elles sont représentées par un `rectangle`.
 
@@ -92,4 +93,48 @@ L'une de ces propriétés est `l'identifiant`. L'identifiant est une propriété
 
 ![mcd](img/identifiantmcd.png)
 
-Cardinalité
+## Les relations porteuses
+
+Une relation est dite porteuse si elle possède des propriétés. Imaginons que nous souhaitons maintenant faire apparaitre la quantité d'article commandés par un client. Nous allons donc ajouter une propriéte a la relation. 
+
+![rel_porteuse](img/relation_porteuse.png)
+
+
+## Les **Cardinalité**
+
+Les `cardinalités` sont des caractères (0,1, n) qui fonctionnent par couple et qui sont présents de chaque côté d’une association (sur chaque « patte »).
+
+Les cardinalités possibles sont :
+
+- 0,1 : au minimum 0, au maximum 1 seule valeur (CIF) ;
+- 1,1 : au minimum 1, au maximum 1 seule valeur (CIF) ;
+- 0,n : au minimum 0, au maximum plusieurs valeurs ;
+- 1,n : au minimum 1, au maximum plusieurs valeurs.
+
+### Exemple 
+![cardinalité](img/cardinalité.png)
+
+> 3 cardinalités (2 autour de l’association « se_situe » et une dernière tronquée)
+
+### Les relation reflexives
+
+Une relation est dite reflexive si elle relie une entite a elle meme. 
+
+
+![alt text](img/relation_reflexives.png)
+
+Ici on peux voir pour la `cardinalité` que les Employés ne peuvent diriger que 1 employé. (1,1)
+
+
+## Règles de concéption     
+
+## ❗️Entité **Forte/Faible**
+
+- Une entité est `forte` si elle peux exister toute seule et etre mere 
+- L'entité enfant est défini comme une entité `faible`
+Elle est considérée comme associée à une autre entitié 
+
+
+
+
+# le nom d'une propriété est retourvé qu'une seule fois dans le mcd
