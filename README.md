@@ -210,7 +210,7 @@ _Il souhaiterait un logiciel simple pour saisir les ventes journalières et pouv
 - Finir par le Modèle Physique des Données.
 
 ## Rendu 
-### Modèle conceptuel de données : 
+### Modèle conceptuel de données avec [JMerise](https://www.jfreesoft.com/JMerise/) : 
 
 ![alt text](img/MCD-ex1.png)
 
@@ -279,3 +279,13 @@ _Il souhaiterait un logiciel simple pour saisir les ventes journalières et pouv
 |--------------------|----------|------------------------|---------------------------------------------------|
 | ID_Catégorie       | Numérique | Élémentaire            | -                                                 |
 | Nom_Catégorie      | Texte    | Élémentaire            | -                                                 |
+
+### Voici le Modèle Logique des Données.
+
+_Le modèle de données logique est une version plus raffinée du modèle conceptuel. Il représente de manière schématique les contraintes de données, les noms des entités et les relations à mettre en œuvre de manière indépendante à la plateforme_
+
+[AWS AMAZON données logiques/données physique](https://aws.amazon.com/fr/compare/the-difference-between-logical-and-physical-data-model/#:~:text=Le%20mod%C3%A8le%20de%20donn%C3%A9es%20logique,mani%C3%A8re%20ind%C3%A9pendante%20%C3%A0%20la%20plateforme.)
+
+
+![alt text](img/MLD-ex1.png)
+
