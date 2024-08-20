@@ -157,7 +157,7 @@ Voici le MCD effectué sur [JMerise](https://www.jfreesoft.com/JMerise/) qui est
 
 ![alt text](img/MCD_TP.png)
 
-## Modele Logique de données (MLD)
+## Modèle Logique de données (MLD)
 
 Le MLD est la suite du processus Merise, on se rapproche un peu plus de la base de données. 
 
@@ -185,3 +185,4 @@ A chaque passage du MCD
 L'entité qui possède l'entité **maximale** égale à 1 recevra le/les identifiants de l'entité ou les cardinalites **maximales** les plus fortes.
 
 
+test commit git
