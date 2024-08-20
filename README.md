@@ -22,10 +22,9 @@
   - **Type date**
   - **Logique booléenne** : (true, false)
 
-![depfonct](img/dependancefonct.png)
-
   Suite à l'interview et à la collecte des documents, il est important de centraliser toutes les informations et les règles de gestion. Ce processus aboutit à la création d'un **dictionnaire de données**.
 
+![depfonct](img/dependancefonct.png)
   ### Formalisation d'une Dépendance Fonctionnelle
 
   Pour formaliser une dépendance fonctionnelle, on utilise la notation suivante :
@@ -134,7 +133,27 @@ Ici on peux voir pour la `cardinalité` que les Employés ne peuvent diriger que
 - L'entité enfant est défini comme une entité `faible`
 Elle est considérée comme associée à une autre entitié 
 
+<br>
 
 
+## 🧑🏼‍🏭 TP conception d'un `MCD` à partir d'un dictionnaire de donnée et d'un ennoncé. 🧑🏼‍🏭 
 
-# le nom d'une propriété est retourvé qu'une seule fois dans le mcd
+Pour pouvoir créer un `MCD` il est necessaire de faire un interview de la sitatution et des envies du client pour son SI. Il faut prendre le plus de details en compte afin de créer un `MCD` viable et le plus proche de la realité et non pas optimiser certaines entités. 
+
+
+#### Voici l'ennoncé du **TP** 
+
+![alt text](img/enoncetpmcp.png)
+
+Il est nécessaire également de créer un `dictionnaire de données` qui vas grandement nous aider à la réalisation du MCD, il permet de lister tout les donnés differentes avec ces caractéristiques. 
+
+Ici le dictionnaire de données est **donné**... 😱
+
+- ### Dictionnaire de données du TP 📖
+![alt text](img/dictionnairededonneetp.png)
+
+
+Voici le MCD effectué sur [JMerise](https://www.jfreesoft.com/JMerise/) qui est **gratuit** ! 
+
+![alt text](img/MCD_TP.png)
+
