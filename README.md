@@ -180,3 +180,8 @@ Dans le cas ou la **cardinalite max** est n des deux cotes, on crée une entité
 
 ![alt text](img/mld1,n0,n.png)
 
+A chaque passage du MCD
+
+L'entité qui possède l'entité **maximale** égale à 1 recevra le/les identifiants de l'entité ou les cardinalites **maximales** les plus fortes.
+
+
