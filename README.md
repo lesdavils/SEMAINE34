@@ -1,5 +1,7 @@
 # 🧙🏾‍♂️
 #  Semaine 34
+![alt text](img/baniere.gif)
+
 # 📅 J1
 
   ## Intérêt de **Merise**
@@ -210,11 +212,11 @@ _Il souhaiterait un logiciel simple pour saisir les ventes journalières et pouv
 - Finir par le Modèle Physique des Données.
 
 ## Rendu 
-### Modèle conceptuel de données avec [JMerise](https://www.jfreesoft.com/JMerise/) : 
+### Modèle conceptuel de données avec [JMerise](https://www.jfreesoft.com/JMerise/) (MCD) : 
 
 ![alt text](img/MCD-ex1.png)
 
-### Voici le dictionnaire des données : 
+### Voici le dictionnaire des données ~~(DDD)~~ : 
 
 #### **Pour la vente :**
 
@@ -280,7 +282,7 @@ _Il souhaiterait un logiciel simple pour saisir les ventes journalières et pouv
 | ID_Catégorie       | Numérique | Élémentaire            | -                                                 |
 | Nom_Catégorie      | Texte    | Élémentaire            | -                                                 |
 
-### Voici le Modèle Logique des Données.
+### Voici le Modèle Logique des Données (MLD).
 
 _Le modèle de données logique est une version plus raffinée du modèle conceptuel. Il représente de manière schématique les contraintes de données, les noms des entités et les relations à mettre en œuvre de manière indépendante à la plateforme_
 
