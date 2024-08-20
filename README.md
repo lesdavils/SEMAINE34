@@ -1,5 +1,6 @@
 # 🧙🏾‍♂️
 #  Semaine 34
+# 📅 J1
 
   ## Intérêt de **Merise**
 
@@ -180,9 +181,101 @@ Dans le cas ou la **cardinalite max** est n des deux cotes, on crée une entité
 
 ![alt text](img/mld1,n0,n.png)
 
-A chaque passage du MCD
 
-L'entité qui possède l'entité **maximale** égale à 1 recevra le/les identifiants de l'entité ou les cardinalites **maximales** les plus fortes.
+# 📅 J2
 
+## Exercice création MCD 📋 
 
-test commit git
+#### Voici l'énoncé 
+_Un agriculteur, Monsieur Bousquet, fait de la vente directe de ses produits ou animaux qu’il élève. Il vend des lapins, des poules, des dindes, des veaux, des cochons. Selon la saison il vend aussi des légumes (choux, pommes de terre, carottes...) et des fruits (fraises, poires, pommes...). Il ne fait que de la vente directe. À la suite de votre discussion, il ressort les informations suivantes._
+
+À l’heure actuelle, les ventes sont inscrites sur trois cahiers distincts :
+
+- Un pour les animaux.
+
+- Un pour les fruits.
+
+- Un pour les légumes.
+
+> Tout est vendu au kilo, les animaux sont pesés vivants avant d’être vendus.
+
+_Il souhaiterait un logiciel simple pour saisir les ventes journalières et pouvoir éditer un récapitu-latif mensuel par type de vente (animaux, légumes et fruits) et par produit (poulets, lapins, poireaux, poires...) pour sa comptabilité._
+
+### Travail à faire:
+
+- Créer le Modèle Conceptuel des Données.
+
+- Concevoir le Modèle Logique des Données.
+
+- Finir par le Modèle Physique des Données.
+
+## Rendu 
+### Modèle conceptuel de données : 
+
+![alt text](img/MCD-ex1.png)
+
+### Voici le dictionnaire des données : 
+
+#### **Pour la vente :**
+
+| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
+|--------------------|----------|------------------------|---------------------------------------------------|
+| ID_Vente           | Numérique | Élémentaire            | -                                                 |
+| Date_Vente         | Date     | Élémentaire            | -                                                 |
+| Poids              | Numérique | Élémentaire            | -                                                 |
+| Quantité           | Numérique | Élémentaire            | -                                                 |
+| Prix_Total         | Numérique | Calculé                | Poids * Prix_Unitaire                |
+| ID_Produit         | Numérique | Élémentaire            | -                                                 |
+| ID_Client          | Numérique | Élémentaire            | -                                                 |
+| ID_Facture         | Numérique | Élémentaire            | -                                                 |
+
+#### **Pour les produits :**
+
+| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
+|--------------------|----------|------------------------|---------------------------------------------------|
+| ID_Produit         | Numérique | Élémentaire            | -                                                 |
+| Nom_Produit        | Texte    | Élémentaire            | -                                                 |
+| Prix_Unitaire      | Numérique | Élémentaire            | -                                                 |
+| ID_Type            | Numérique | Élémentaire            | -                                                 |
+| ID_Catégorie       | Numérique | Élémentaire            | -                                                 |
+
+#### **Pour les types de produits :** 
+
+| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
+|--------------------|----------|------------------------|---------------------------------------------------|
+| ID_Type            | Numérique | Élémentaire            | -                                                 |
+| Nom_Type           | Texte    | Élémentaire            | -                                                 |
+
+#### **Pour les clients :**
+
+| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
+|--------------------|----------|------------------------|---------------------------------------------------|
+| ID_Client          | Numérique | Élémentaire            | -                                                 |
+| Nom_Client         | Texte    | Élémentaire            | -                                                 |
+| Adresse_Client     | Texte    | Élémentaire            | -                                                 |
+| Téléphone_Client   | Texte    | Élémentaire            | -                                                 |
+
+#### **Pour les factures :**
+
+| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
+|--------------------|----------|------------------------|---------------------------------------------------|
+| ID_Client          | Numérique | Élémentaire            | -                                                 |
+| Nom_Client         | Texte    | Élémentaire            | -                                                 |
+| Adresse_Client     | Texte    | Élémentaire            | -                                                 |
+| Téléphone_Client   | Texte    | Élémentaire            | -                                                 |
+
+#### **Pour le stock :**
+
+| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
+|--------------------|----------|------------------------|---------------------------------------------------|
+| ID_Stock           | Numérique | Élémentaire            | -                                                 |
+| Date_Stock         | Date     | Élémentaire            | -                                                 |
+| Quantité_Stock     | Numérique | Élémentaire            | -                                                 |
+| ID_Produit         | Numérique | Élémentaire            | -                                                 |
+
+#### **Et pour les catégories de produits :** 
+
+| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
+|--------------------|----------|------------------------|---------------------------------------------------|
+| ID_Catégorie       | Numérique | Élémentaire            | -                                                 |
+| Nom_Catégorie      | Texte    | Élémentaire            | -                                                 |
