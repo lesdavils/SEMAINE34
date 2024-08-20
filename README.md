@@ -1,6 +1,7 @@
 # 🧙🏾‍♂️
 #  Semaine 34
 ![alt text](img/baniere.gif)
+![alt text](<img/giphy-_1_ (1).gif>)
 
 # 📅 J1
 
