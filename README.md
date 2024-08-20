@@ -157,3 +157,26 @@ Voici le MCD effectué sur [JMerise](https://www.jfreesoft.com/JMerise/) qui est
 
 ![alt text](img/MCD_TP.png)
 
+## Modele Logique de données (MLD)
+
+Le MLD est la suite du processus Merise, on se rapproche un peu plus de la base de données. 
+
+### Cas simple, (0,n) (1,1) ou (1,n) (0,1)
+
+![alt text](img/mcd1,n11.png)
+
+#### Nous arrivons au MLD suivant :
+
+![](img/mld1,n11.png)
+
+L'entité qui possède la cardinalité 1,1 ou 0,1 absorbe l'identifiant de l'entite la plus forte (0,n ou 1,n). Cet identifiant devient alors une clé étrangere.
+<br>
+
+### Cas (0,n), (0,n) ou (1,n), (1,n)
+
+![*alt text*](img/mcd1,n0,n.png)
+
+Dans le cas ou la **cardinalite max** est n des deux cotes, on crée une entité intermediaire qui va contenir les deux clés étrangeres des deux entités : 
+
+![alt text](img/mld1,n0,n.png)
+
