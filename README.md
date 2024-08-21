@@ -1,8 +1,10 @@
-# 🧙🏾‍♂️
-#  Semaine 34
-![alt text](<img/giphy-_1_ (1).gif>)
+#  **💈Semaine 34💈**
 
-# 📅 J1
+<p align="center"><img src="img/giphy-_1_ (1).gif" style="max-width: 100%; height: auto;" /></p>
+
+[<img src="https://louisvandevelde.be/image/merise.png" align="right" width="120">](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+
+# 📅 J1 `19/08/2024`
 
   ## Intérêt de **Merise**
 
@@ -83,6 +85,10 @@ Avec un énoncé et une copie de la facture
 
 
 ## Partie conceptuelle **MCD**
+
+
+[<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOm9dIAMFvoLAtYDh336NUNPmBqmRqT45nNg&s" align="right" width="100">](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+
 
 Un `MCD` [(Modèle Conceptuel de Données)](https://www.base-de-donnees.com/mcd/) est une représentation schématique qui illustre les données d'une entreprise (ou d'un projet spécifique). Il sert à organiser, à structurer et à visualiser ces données de manière logique et facilement compréhensible.
 
@@ -184,7 +190,7 @@ Dans le cas ou la **cardinalite max** est n des deux cotes, on crée une entité
 ![alt text](img/mld1,n0,n.png)
 
 
-# 📅 J2
+# 📅 J2  `20/08/2024`
 
 ## Exercice création MCD 📋 
 
@@ -225,6 +231,7 @@ _Le modèle de données logique est une version plus raffinée du modèle concep
 
 ![alt text](img/MLD-ex1.png)
 
+# 📅 J3  `21/08/2024`
 
 ### Et pour finir le Modèle Physique des Données (MPD)
 
