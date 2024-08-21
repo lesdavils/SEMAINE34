@@ -216,72 +216,6 @@ _Il souhaiterait un logiciel simple pour saisir les ventes journalières et pouv
 
 ![alt text](img/MCD-ex1.png)
 
-### Voici le dictionnaire des données ~~(DDD)~~ : 
-
-#### **Pour la vente :**
-
-| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
-|--------------------|----------|------------------------|---------------------------------------------------|
-| ID_Vente           | Numérique | Élémentaire            | -                                                 |
-| Date_Vente         | Date     | Élémentaire            | -                                                 |
-| Poids              | Numérique | Élémentaire            | -                                                 |
-| Quantité           | Numérique | Élémentaire            | -                                                 |
-| Prix_Total         | Numérique | Calculé                | Poids * Prix_Unitaire                |
-| ID_Produit         | Numérique | Élémentaire            | -                                                 |
-| ID_Client          | Numérique | Élémentaire            | -                                                 |
-| ID_Facture         | Numérique | Élémentaire            | -                                                 |
-
-#### **Pour les produits :**
-
-| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
-|--------------------|----------|------------------------|---------------------------------------------------|
-| ID_Produit         | Numérique | Élémentaire            | -                                                 |
-| Nom_Produit        | Texte    | Élémentaire            | -                                                 |
-| Prix_Unitaire      | Numérique | Élémentaire            | -                                                 |
-| ID_Type            | Numérique | Élémentaire            | -                                                 |
-| ID_Catégorie       | Numérique | Élémentaire            | -                                                 |
-
-#### **Pour les types de produits :** 
-
-| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
-|--------------------|----------|------------------------|---------------------------------------------------|
-| ID_Type            | Numérique | Élémentaire            | -                                                 |
-| Nom_Type           | Texte    | Élémentaire            | -                                                 |
-
-#### **Pour les clients :**
-
-| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
-|--------------------|----------|------------------------|---------------------------------------------------|
-| ID_Client          | Numérique | Élémentaire            | -                                                 |
-| Nom_Client         | Texte    | Élémentaire            | -                                                 |
-| Adresse_Client     | Texte    | Élémentaire            | -                                                 |
-| Téléphone_Client   | Texte    | Élémentaire            | -                                                 |
-
-#### **Pour les factures :**
-
-| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
-|--------------------|----------|------------------------|---------------------------------------------------|
-| ID_Client          | Numérique | Élémentaire            | -                                                 |
-| Nom_Client         | Texte    | Élémentaire            | -                                                 |
-| Adresse_Client     | Texte    | Élémentaire            | -                                                 |
-| Téléphone_Client   | Texte    | Élémentaire            | -                                                 |
-
-#### **Pour le stock :**
-
-| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
-|--------------------|----------|------------------------|---------------------------------------------------|
-| ID_Stock           | Numérique | Élémentaire            | -                                                 |
-| Date_Stock         | Date     | Élémentaire            | -                                                 |
-| Quantité_Stock     | Numérique | Élémentaire            | -                                                 |
-| ID_Produit         | Numérique | Élémentaire            | -                                                 |
-
-#### **Et pour les catégories de produits :** 
-
-| Attribut           | Type     | Élémentaire / Calculé | Règle de calcul                                   |
-|--------------------|----------|------------------------|---------------------------------------------------|
-| ID_Catégorie       | Numérique | Élémentaire            | -                                                 |
-| Nom_Catégorie      | Texte    | Élémentaire            | -                                                 |
-
 ### Voici le Modèle Logique des Données (MLD).
 
 _Le modèle de données logique est une version plus raffinée du modèle conceptuel. Il représente de manière schématique les contraintes de données, les noms des entités et les relations à mettre en œuvre de manière indépendante à la plateforme_
@@ -290,4 +224,81 @@ _Le modèle de données logique est une version plus raffinée du modèle concep
 
 
 ![alt text](img/MLD-ex1.png)
+
+
+### Et pour finir le Modèle Physique des Données (MPD)
+
+_Dans la méthode Merise, le modèle physique des données consiste à implanter une base de données dans un SGBDR (Système de gestion de base de donnée). Le langage utilisé pour ce type d'opération est le SQL._
+
+#### On peux voir ici la création des differentes tables, et l'assignation des clé primaire et secondaire (PRIMARY KEY, FOREIGN KEY)
+
+  >Il est nécessaire ensuite de créer une base de donnnée et d'éxecuter cette commande dans son SGBDR, pour ma part c'est MySql. 
+
+```sql
+CREATE TABLE Type_Produit (
+    ID_Type INT AUTO_INCREMENT PRIMARY KEY,
+    Nom_Type TEXT NOT NULL
+);
+
+CREATE TABLE Categorie_Produit (
+    ID_Categorie INT AUTO_INCREMENT PRIMARY KEY,
+    Nom_Categorie TEXT NOT NULL
+);
+
+CREATE TABLE Client (
+    ID_Client INT AUTO_INCREMENT PRIMARY KEY,
+    Nom_Client TEXT NOT NULL,
+    Adresse_Client TEXT,
+    Téléphone_Client TEXT
+);
+
+CREATE TABLE Produit (
+    ID_Produit INT AUTO_INCREMENT PRIMARY KEY,
+    Nom_Produit TEXT NOT NULL,
+    Prix_Unitaire DECIMAL(10, 2) NOT NULL,
+    ID_Type INT,
+    ID_Categorie INT,
+    FOREIGN KEY (ID_Type) REFERENCES Type_Produit(ID_Type),
+    FOREIGN KEY (ID_Categorie) REFERENCES Categorie_Produit(ID_Categorie)
+);
+
+CREATE TABLE Stock (
+    ID_Stock INT AUTO_INCREMENT PRIMARY KEY,
+    Date_Stock DATE NOT NULL,
+    Quantité_Stock DECIMAL(10, 2) NOT NULL,
+    ID_Produit INT,
+    FOREIGN KEY (ID_Produit) REFERENCES Produit(ID_Produit)
+);
+
+CREATE TABLE Facture (
+    ID_Facture INT AUTO_INCREMENT PRIMARY KEY,
+    Date_Facture DATE NOT NULL,
+    Montant_Total DECIMAL(10, 2) NOT NULL,
+    ID_Client INT,
+    FOREIGN KEY (ID_Client) REFERENCES Client(ID_Client)
+);
+
+CREATE TABLE Vente (
+    ID_Vente INT AUTO_INCREMENT PRIMARY KEY,
+    Date_Vente DATE NOT NULL,
+    Poids DECIMAL(10, 2) NOT NULL,
+    Quantité INT NOT NULL,
+    Prix_Total DECIMAL(10, 2),
+    ID_Produit INT,
+    ID_Client INT,
+    ID_Facture INT,
+    FOREIGN KEY (ID_Produit) REFERENCES Produit(ID_Produit),
+    FOREIGN KEY (ID_Client) REFERENCES Client(ID_Client),
+    FOREIGN KEY (ID_Facture) REFERENCES Facture(ID_Facture)
+);
+```
+
+### Voici le rendu sur Mysql 
+
+![alt text](img/ex1_BDD.png)
+
+> **Il est possible également d'exporter directement le dictionnaire de donnée ce que j'ai fait :** 
+
+
+![alt text](img/ex1_ddd.png)
 
