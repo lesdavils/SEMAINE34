@@ -309,3 +309,31 @@ CREATE TABLE Vente (
 
 ![alt text](img/ex1_ddd.png)
 
+
+
+EX 2
+
+MCD
+
+![alt text](image.png)
+
+MLD
+
+![alt text](image-1.png)
+
+
+Modèle Logique de Données Relationnelle "MLDR" : 
+```
+Ensembles (  #ID_Ensemble,   Désignation  )
+
+Sous ensemble (  #ID_Sousensemble,   Désignation,   Largeur,   Longueur,   Hauteur,   Prix  )
+
+Composants (  #ID_Composants,   Désignation,   Prix  )
+
+Contenir ( Quantité,    #ID_Ensemble_Ensembles,    #ID_Composants_Composants  )
+
+Assembler ( Quantité,    #ID_Sousensemble_Sous ensemble,    #ID_Composants_Composants  )
+
+Composer ( Quanité,    #ID_Sousensemble_Sous ensemble,    #ID_Ensemble_Ensembles  )
+```
+
